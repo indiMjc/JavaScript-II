@@ -57,6 +57,8 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
+
+// NOT CONCATONATED
 let fullNames = [];
 runners.forEach(function(currentRunner){
   fullNames.push(currentRunner.first_name);
@@ -84,6 +86,8 @@ console.log(shirtSizeLarge);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
+
+// NOT FINISHED
 let ticketPriceTotal = runners.reduce(function(acc, donations){
   return acc + runners.donation;
 }, 0);
