@@ -4,15 +4,15 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 function myHobbies(whose){
-  const hobby1 = 'disc Golf';
+  const hobby1 = 'disc golf';
   const hobby2 = 'kayaking';
   const hobby3 = 'camping';
   const hobby4 = 'crocheting';
   const hobby5 = 'scrap booking';
-  console.log(`${whose} favorite hobbies include ${hobby1}, ${hobby3} and ${hobby2}.`);
+  console.log(`${whose} favorite hobbies include ${hobby1}, ${hobby2}, and ${hobby3}.`);
 
   function momsHobbies(ma){
-    console.log(`${whose} ${ma} favorite hobbies include ${hobby4} and ${hobby5}.`)
+    console.log(`${whose} ${ma} favorite hobbies include ${hobby4} and ${hobby5}.`);
   }momsHobbies("mother's");
 }myHobbies('My');
 
