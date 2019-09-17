@@ -3,17 +3,13 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-function higherOrder(num1, num2, myCallback){
-  return myCallback(num1, num2);
+function hobbies(hobby){
+  const hobby1 = 'disc Golf';
+  const hobby2 = 'kayaking';
+  return `During the Summer my hobbies include ${hobby1} and ${hobby2}.  In the winter I like to go ${hobby}`;
 };
 
-const findRemainder = function(num1, num2){
-  return num1 % num2;
-};
-
-const multiply = function(num1, num2){
-  return num1 * num2;
-};
+console.log(hobbies('snowmobiling.'));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
