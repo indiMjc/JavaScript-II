@@ -3,13 +3,18 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-function hobbies(hobby){
+function myHobbies(whose){
   const hobby1 = 'disc Golf';
   const hobby2 = 'kayaking';
-  return `During the Summer my hobbies include ${hobby1} and ${hobby2}.  In the winter I like to go ${hobby}`;
-};
+  const hobby3 = 'camping';
+  const hobby4 = 'crocheting';
+  const hobby5 = 'scrap booking';
+  console.log(`${whose} favorite hobbies include ${hobby1}, ${hobby3} and ${hobby2}.`);
 
-console.log(hobbies('snowmobiling.'));
+  function momsHobbies(ma){
+    console.log(`${whose} ${ma} favorite hobbies include ${hobby4} and ${hobby5}.`)
+  }momsHobbies("mother's");
+}myHobbies('My');
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
