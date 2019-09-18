@@ -104,7 +104,7 @@ const overLimit = runners.filter(function(member){
 });
 console.log(overLimit);
 
-// Problem 2 - add me to array
+// Problem 2 - add me to end of array
 newMember = {
   id: 51,
   first_name: "Michael",

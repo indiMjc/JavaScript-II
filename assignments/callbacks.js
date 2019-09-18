@@ -80,11 +80,20 @@ console.log(multiplyNums(3, 4, product));
 
 
 // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
+// Pass true to the callback if it is, otherwise pass false.
 function contains(item, list, cb) {
   return cb(item, list);
 }
-
+const checkForNewMember = function(item, list){
+  var i;
+  for (i = 0; i < list.length; i++){
+    if (list[i] === item) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(contains(newMember, runners, checkForNewMember));
 
 /* STRETCH PROBLEM */
 
