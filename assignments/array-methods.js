@@ -57,8 +57,6 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
-
-
 let fullNames = [];
 runners.forEach(function(currentRunner){
   fullNames.push(`${currentRunner.last_name}, ${currentRunner.first_name}`);
@@ -90,7 +88,6 @@ console.log(runnersLargeSizeShirt);
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
 
-// NOT FINISHED
 let ticketPriceTotal = runners.reduce(function(acc, item){
   return acc + item.donation;
 }, 0);
@@ -101,8 +98,28 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1 - $200 donation limit, return members who are over
+const overLimit = runners.filter(function(member){
+  return member.donation > 200;
+});
+console.log(overLimit);
 
-// Problem 2
+// Problem 2 - add me to array
+newMember = {
+  id: 51,
+  first_name: "Michael",
+  last_name: "Curry",
+  email: "indimjc1@gmail.com",
+  shirt_size: "M",
+  company_name: "KBS",
+  donation: "52"
+}
 
-// Problem 3
+runners.splice(runners.length, 0, newMember);
+
+console.log(runners);
+
+// Problem 3 - remove first 5 members
+runners.splice(0, 5);
+
+console.log(runners);
